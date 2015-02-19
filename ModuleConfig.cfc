@@ -29,10 +29,9 @@ component {
 		// module settings - stored in modules.name.settings
 		settings = {
 			oauth = {
-				oauthVersion 		= 1,
-				tokenRequestURL 	= "https://api.linkedin.com/oauth/request_token",
-				authorizeRequestURL = "https://api.linkedin.com/oauth/authorize",
-				accessRequestURL 	= "https://api.linkedin.com/oauth/access_token"
+				oauthVersion 		= 2,
+				authorizeRequestURL = "https://www.linkedin.com/uas/oauth2/authorization",
+				tokenRequestURL 	= "https://www.linkedin.com/uas/oauth2/accessToken"
 			}
 		};
 
@@ -71,11 +70,11 @@ component {
 	*/
 	function onLoad(){
 		var nsgSocialLogin = controller.getSetting('nsgSocialLogin',false,arrayNew());
-			arrayAppend(nsgSocialLogin,{"name":"linkedin","icon":"linkedin","title":"linkedin"});
+			arrayAppend(nsgSocialLogin,{"name":"linkedin","icon":"linkedin","title":"LinkedIn"});
 			controller.setSetting('nsgSocialLogin',nsgSocialLogin);
 		var nsgMenu = controller.getSetting('nsgMenu',false,[]);
 		// menu::login
-		arrayAppend(nsgMenu,{ "menu"="topRight","subid":"login","icon"="fa fa-linkedin","id":"loginlinkedin","title":"Sign-in with linkedin","link":"/security/login/linkedin","roles":"","type":"link","isUserLoggedIn":false });
+		arrayAppend(nsgMenu,{ "menu"="topRight","subid":"login","icon"="fa fa-linkedin","id":"loginlinkedin","title":"Sign-in with LinkedIn","link":"/security/login/linkedin","roles":"","type":"link","isUserLoggedIn":false });
 	}
 
 	/**
