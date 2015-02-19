@@ -5,10 +5,20 @@ Setup & Installation
 ---------------------
 
 ####Add the following structure to Coldbox.cfc
-	linkedIn = {
+	linkedin = {
 		oauth = {
+			redirectURL			= "{{your_redirect_url_when_linkedin_returns_user}}",
+			loginSuccess		= "login.success",
+			loginFailure		= "login.failure",
+			apiKey				= "{{linkedin_provided_api_key}}",
+			apiSecret			= "{{linkedin_provided_api_secret}}",
+			oauthToken			= "{{linkedin_provided_oauth_token}}",
+			oauthSecret			= "{{linkedin_provided_oauth_secret}}",
+			scope 				= "r_fullprofile r_emailaddress r_contactinfo w_share r_basicprofile",
+			responseType		= "code",
+			grantType			= "authorization_code"
 		}
-	}
+	},
 
 Interception Point
 ---------------------
