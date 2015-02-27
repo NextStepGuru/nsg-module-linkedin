@@ -1,7 +1,7 @@
 {
     "name":"nsg-module-linkedin",
     "slug":"nsg-module-linkedin",
-    "version":"1.0.0",
+    "version":"1.0.5",
     "author":"Jeremy R DeYoung",
     "shortDescription":"Coldbox Module to allow Social Login via LinkedIn",
     "location":"",

@@ -5,7 +5,7 @@ component {
 	this.author 			= "Jeremy R DeYoung";
 	this.webURL 			= "http://www.nextstep.guru";
 	this.description 		= "Coldbox Module to allow Social Login via LinkedIn";
-	this.version			= "1.0.0";
+	this.version			= "1.0.5";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
@@ -72,9 +72,7 @@ component {
 		var nsgSocialLogin = controller.getSetting('nsgSocialLogin',false,arrayNew());
 			arrayAppend(nsgSocialLogin,{"name":"linkedin","icon":"linkedin","title":"LinkedIn"});
 			controller.setSetting('nsgSocialLogin',nsgSocialLogin);
-		var nsgMenu = controller.getSetting('nsgMenu',false,[]);
-		// menu::login
-		arrayAppend(nsgMenu,{ "menu"="topRight","subid":"login","icon"="fa fa-linkedin","id":"loginlinkedin","title":"Sign-in with LinkedIn","link":"/security/login/linkedin","roles":"","type":"link","isUserLoggedIn":false });
+
 	}
 
 	/**
